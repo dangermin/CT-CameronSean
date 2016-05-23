@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<script src="print.js"></script>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body ng-controller="printCtrl as vm">
+		<h1 class="text-center">Print This</h1>
+		<button onClick="namePrint()">Click Me</button>
+
+		<div ng-repear="print in prints">
+			<button type="button" ng-click="vm.namePrint()">Or Click Me</button>
+			<p>{{vm.prints}}</p>
+		</div>
+
+	<!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- scripts -->
+	<script type="text/javascript" src="print.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
